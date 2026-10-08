@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Speed Typing Test</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container-card">
+        <h1 class="heading">Speed Typing Test</h1>
+        <p class="hint">Type the quote exactly as shown. Pasting is disabled.</p>
+
+        <div class="timer-row" aria-live="polite">
+            <img src="https://assets.ccbp.in/frontend/dynamic-webapps/clock-img.png" alt="" class="clock-icon" />
+            <div class="timer-wrap">
+                <div id="timer" class="timer">0</div>
+                <div class="timer-label">seconds</div>
+            </div>
+        </div>
+
+        <div id="speedTypingTest" class="test-area">
+            <div class="quote-box" aria-live="polite">
+                <p id="quoteDisplay" class="quote-text" aria-atomic="true">Loading quote…</p>
+            </div>
+
+            <label for="quoteInput" class="visually-hidden">Type the quote here</label>
+            <textarea id="quoteInput" class="input-area" rows="5" placeholder="Type here!!" aria-label="Type the quote here" disabled></textarea>
+
+            <p id="result" class="result" role="status" aria-live="polite"></p>
+
+            <div class="controls">
+                <button id="startBtn" class="btn primary" disabled>Start</button>
+                <button id="submitBtn" class="btn" disabled>Submit</button>
+                <button id="resetBtn" class="btn outline">New Quote</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js" defer></script>
+</body>
+
+</html>

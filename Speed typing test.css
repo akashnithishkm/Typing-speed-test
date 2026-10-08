@@ -1,0 +1,171 @@
+/* Simple, compatible CSS */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(90deg, #f3eaff, #dac0ff);
+    color: #24303b;
+    padding: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.container-card {
+    width: 100%;
+    max-width: 820px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 22px;
+    box-shadow: 0 10px 30px rgba(16, 24, 40, 0.06);
+}
+
+.heading {
+    color: #690cb0;
+    font-size: 32px;
+    margin: 0 0 6px 0;
+    font-weight: 700;
+}
+
+.hint {
+    margin: 0 0 12px 0;
+    color: #55606a;
+}
+
+.timer-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.clock-icon {
+    width: 48px;
+    height: 48px;
+}
+
+.timer {
+    font-size: 40px;
+    font-weight: 700;
+    color: #323f4b;
+}
+
+.timer-label {
+    font-size: 13px;
+    color: #6b7785;
+}
+
+.test-area {
+    margin-top: 8px;
+}
+
+.quote-box {
+    background: #f7f3ff;
+    border: 2px solid #dac0ff;
+    border-radius: 10px;
+    padding: 16px;
+    min-height: 120px;
+    overflow-wrap: break-word;
+}
+
+.quote-text {
+    margin: 0;
+    color: #3e4c59;
+    font-size: 18px;
+    line-height: 1.6;
+    user-select: none;
+}
+
+.quote-text span {
+    user-select: none;
+    white-space: pre-wrap;
+}
+
+.input-area {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #e0e6ef;
+    font-size: 16px;
+    min-height: 90px;
+    resize: vertical;
+}
+
+.input-area:focus {
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(105, 12, 176, 0.08);
+    border-color: #690cb0;
+}
+
+.input-area[disabled] {
+    background: #f2f2f6;
+    color: #7a8790;
+}
+
+.result {
+    margin-top: 12px;
+    font-size: 16px;
+    color: #3e4c59;
+    font-weight: 600;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.btn {
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid #d6dbe6;
+    background: #fff;
+}
+
+.btn.primary {
+    background: #690cb0;
+    color: #fff;
+    border: none;
+}
+
+.btn.outline {
+    background: #fff;
+    color: #3e4c59;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width:520px) {
+    .heading {
+        font-size: 26px;
+    }
+
+    .timer {
+        font-size: 34px;
+    }
+
+    .quote-box {
+        min-height: 100px;
+        padding: 12px;
+    }
+}
